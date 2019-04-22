@@ -5,12 +5,12 @@ layout: LandingPage
 ms.topic: landing-page
 ms.date: 09/28/2018
 google-site-verification: b-xRLveOzJ9oSOh37wgRTRB2lMOoFY8HiHf9_0DIawE
-ms.openlocfilehash: e247985aa92e1c2bf3cb4d43514f4d06250f1141
-ms.sourcegitcommit: 548374a0133f3caed3934fda6a380c76e6eaecea
+ms.openlocfilehash: d91e905f2309792cf96fe41fa2fdf56704b95d6e
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58419973"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640296"
 ---
 # <a name="azure-architecture-center"></a>Azure アーキテクチャ センター
 
@@ -162,8 +162,8 @@ ms.locfileid: "58419973"
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>回復性の設計</h3>
-                            <p>回復性に優れた Azure 用アプリケーションの設計方法を説明します。</p>
+                            <h3>信頼性の高い Azure アプリケーションの設計</h3>
+                            <p>Azure 用のアプリケーションにフォールト トレランスおよび高可用性を組み込む方法について説明します。</p>
                         </div>
                     </div>
                 </div>
@@ -204,26 +204,6 @@ ms.locfileid: "58419973"
                         <div class="cardText">
                             <h3>クラウド設計パターン</h3>
                             <p>開発者およびソリューション アーキテクトのための設計パターン。 各パターンでは、問題、その問題を解決するパターン、Azure に基づく例を説明します。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <!-- Checklists -->
-    <li>
-        <a href="/azure/architecture/checklist/">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img src="_images/checklist.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>設計レビューのチェックリスト</h3>
-                            <p>設計プロセスで開発者やソリューション アーキテクトに役立つチェックリスト。</p>
                         </div>
                     </div>
                 </div>
