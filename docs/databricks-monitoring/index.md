@@ -3,12 +3,12 @@ title: Azure Monitor を使用した Azure Databricks の監視
 description: Azure Log Analytics で Azure Databricks の監視を有効にする Scala ライブラリ
 author: petertaylor9999
 ms.date: 03/26/2019
-ms.openlocfilehash: 4544d3abc3264ec459a80ac1a61a912e6d30d6b2
-ms.sourcegitcommit: 1a3cc91530d56731029ea091db1f15d41ac056af
+ms.openlocfilehash: 93798ccf74735a880eab2999008b1495e6a63e10
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58887694"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640535"
 ---
 # <a name="monitoring-azure-databricks"></a>Azure Databricks の監視
 
@@ -24,7 +24,7 @@ ms.locfileid: "58887694"
 
 これらの記事に付属しているコード ライブラリを使用すると、Spark のメトリック、イベント、ログ情報を Azure Monitor に送信する Azure Databricks の基本的な監視機能が拡張されます。
 
-これらの記事と付属のコード ライブラリの対象ユーザーは、Apache Spark と Azure Databricks のソリューション開発者です。 コードは、Java アーカイブ (JAR) ファイルに組み込まれ、Azure Databricks クラスターにデプロイされる必要があります。 コードでは [Scala](https://www.scala-lang.org/) と Java が組み合わされていて、出力 JAR ファイルをビルドするための、対応する一連の [Maven](https://maven.apache.org) プロジェクト オブジェクト モデル (POM) ファイルがあります。 Java、Scala、および Maven についての理解が前提条件として推奨されます。
+これらの記事と付属のコード ライブラリの対象ユーザーは、Apache Spark と Azure Databricks のソリューション開発者です。 コードは、Java アーカイブ (JAR) ファイルに組み込まれ、Azure Databricks クラスターにデプロイされる必要があります。 コードでは [Scala](https://www.scala-lang.org/) と Java が組み合わされていて、出力 JAR ファイルをビルドするための、対応する一連の [Maven](https://maven.apache.org) プロジェクト オブジェクト モデル (POM) ファイルがあります。 前提条件として Java、Scala、および Maven について理解していることが推奨されます。
 
 ## <a name="next-steps"></a>次の手順
 

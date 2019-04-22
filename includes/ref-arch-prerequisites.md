@@ -2,13 +2,15 @@
 
 2. [Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest) をインストールします。
 
-3. [Azure の構成要素](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks) npm パッケージをインストールします。
+3. [ノードと NPM](https://nodejs.org/en/download/) をインストールする
+
+4. [Azure の構成要素](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks) npm パッケージをインストールします。
 
    ```bash
    npm install -g @mspnp/azure-building-blocks
    ```
 
-4. コマンド プロンプト、bash プロンプト、または PowerShell プロンプトから、次のように Azure アカウントにサインインします。
+5. コマンド プロンプト、bash プロンプト、または PowerShell プロンプトから、次のように Azure アカウントにサインインします。
 
    ```bash
    az login

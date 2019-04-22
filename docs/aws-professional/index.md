@@ -9,12 +9,12 @@ ms.topic: article
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
 ms.custom: seodec18
-ms.openlocfilehash: 89434c0ce72b9f061e4b092354b1dcbaf683b7c6
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 6e44953cccf39cc40be775f4043bcf8b1b890dae
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58346316"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59641163"
 ---
 # <a name="azure-for-aws-professionals"></a>AWS プロフェッショナルのための Azure
 
@@ -157,7 +157,7 @@ Azure の [geo 冗長ストレージ](/azure/storage/common/storage-redundancy-g
 
 - [Azure アプリケーションの高可用性](../resiliency/high-availability-azure-applications.md)
 
-- [Azure アプリケーションのディザスター リカバリー](../resiliency/disaster-recovery-azure-applications.md)
+- [Azure アプリケーションの障害とディザスター リカバリー](../reliability/disaster-recovery.md)
 
 - [Azure での Linux 仮想マシンに対する計画的なメンテナンス](/azure/virtual-machines/linux/maintenance-and-updates)
 
