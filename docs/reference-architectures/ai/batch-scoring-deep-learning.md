@@ -8,12 +8,12 @@ ms.topic: reference-architecture
 ms.service: architecture-center
 ms.subservice: reference-architecture
 ms.custom: azcat-ai
-ms.openlocfilehash: a1c0701185c85f8e7bcbc183b32c4834529fc524
-ms.sourcegitcommit: 1a3cc91530d56731029ea091db1f15d41ac056af
+ms.openlocfilehash: 3459f7895b7b57833da5853a77b2641dc7c85a9e
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58887864"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639718"
 ---
 # <a name="batch-scoring-of-deep-learning-models-on-azure"></a>Azure でのディープ ラーニング モデルのバッチ スコアリング
 
@@ -120,7 +120,7 @@ Machine Learning コンピューティング クラスターをデプロイす�
 
 ### <a name="logging-with-azure-machine-learning"></a>Azure Machine Learning によるログ記録
 
-Azure Machine Learning は、関連付けられている Blob ストレージ アカウントに、すべての stdout/stderr を自動的に記録します。 特に指定しない場合、Azure Machine Learning ワークスペースによって、自動的にストレージ アカウントがプロビジョニングされ、そこにログがダンプされます。 Storage Explorer などのストレージ ナビゲーション ツールを使用することもできます。これにより、ログ ファイル間を移動するエクスペリエンスがはるかに簡単になります。
+Azure Machine Learning では、関連付けられている BLOB ストレージ アカウントに、すべての stdout/stderr が自動的に記録されます。 特に指定しない場合、Azure Machine Learning ワークスペースによって、自動的にストレージ アカウントがプロビジョニングされ、そこにログがダンプされます。 Storage Explorer などのストレージ ナビゲーション ツールを使用することもできます。これにより、ログ ファイル間を移動するエクスペリエンスがはるかに簡単になります。
 
 ## <a name="cost-considerations"></a>コストに関する考慮事項
 

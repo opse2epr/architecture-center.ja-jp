@@ -7,12 +7,12 @@ ms.custom: governance
 ms.date: 02/11/2019
 description: 大企業 – 大企業での複数レイヤーのガバナンス
 author: BrianBlanchard
-ms.openlocfilehash: 5d79d54f94a39aa1e16018b9c3c9f02c6862fff2
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 1a90f8007077df0ecefa8ec5d8c0dd6bfca9ccc7
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58241121"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59641214"
 ---
 # <a name="multiple-layers-of-governance-in-large-enterprises"></a>大企業での複数レイヤーのガバナンス
 
@@ -38,7 +38,7 @@ ms.locfileid: "58241121"
 
 ## <a name="requirements-to-supporting-such-a-team-sport"></a>そのようなチーム スポーツをサポートするための要件
 
-複数レイヤーのガバナンス モデルの最初の要件は、ガバナンスの階層を理解することです。 次の質問に答えると、一般的なガバナンス階層の理解に役立ちます:
+複数レイヤーのガバナンス モデルの最初の要件は、ガバナンスの階層を理解することです。 次の質問に答えると、一般的なガバナンス階層の理解に役立ちます。
 
 - クラウド会計 (クラウド サービスに対する請求) をビジネス ユニット間でどのように配分するか?
 - 企業の IT 部門と各ビジネス ユニットの間でガバナンスの責任をどのように配分するか?

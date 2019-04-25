@@ -8,12 +8,12 @@ ms.topic: checklist
 ms.service: architecture-center
 ms.subservice: cloud-design-principles
 ms.custom: checklist
-ms.openlocfilehash: 1a000c811cce57cc9b1fcda84d0eb7e2a1312aca
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: b08884d2a39550b56b4c1b52a418f6607eda00fe
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58243383"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640721"
 ---
 # <a name="devops-checklist"></a>DevOps チェックリスト
 
@@ -99,7 +99,7 @@ DevOps とは、開発と品質保証と IT 運用を、統一されたカルチ
 
 ## <a name="monitoring"></a>監視
 
-**システムを監視可能にする。** 運用チームは、システムやサービスの正常性と状態を絶えず明確に把握しておく必要があります。 状態を監視するための外部の正常性エンドポイントをセットアップすると共に、運用上のメトリックをインストルメント化するようアプリケーションをコーディングしてください。 システムの枠を越えてイベントを相互に関連付けることができる一般的かつ一貫性のあるスキーマを使用しましょう。 [Azure 診断][azure-diagnostics]や [Application Insights][app-insights] は、Azure のリソースの正常性と状態を追跡する標準的な手法です。 また、Microsoft [Operation Management Suite][oms] を通じて、クラウド ソリューションまたはハイブリッド ソリューションのための一元化された監視と管理の機能を利用することもできます。
+**システムを監視可能にする。** 運用チームは、システムやサービスの正常性と状態を絶えず明確に把握しておく必要があります。 状態を監視するための外部の正常性エンドポイントをセットアップすると共に、運用上のメトリックをインストルメント化するようアプリケーションをコーディングしてください。 システムの枠を越えてイベントを相互に関連付けることができる一般的かつ一貫性のあるスキーマを使用しましょう。 [Azure Diagnostics][azure-diagnostics] や [Application Insights][app-insights] は、Azure のリソースの正常性と状態を追跡する標準的な手法です。 また、Microsoft [Operation Management Suite][oms] を通じて、クラウド ソリューションまたはハイブリッド ソリューションのための一元化された監視と管理の機能を利用することもできます。
 
 **ログとメトリックを集計して相互に関連付ける。** 適切にインストルメント化されたテレメトリ システムからは、生のパフォーマンス データとイベント ログが大量に生成されます。 テレメトリ データとログ データの処理と相互の関連付けが短時間で実行され、システムの正常性に関して、常に最新の情報を運用スタッフが把握できることを確認してください。 問題の全体像が把握できるようにデータを整理して表示し、イベントが互いに関連している場合にはそれが可能な限り明らかになるようにします。
 
@@ -119,7 +119,7 @@ DevOps とは、開発と品質保証と IT 運用を、統一されたカルチ
 
 また、アプリケーションとその基盤となるオペレーティング システムとの間に抽象化レイヤーが形成され、環境間の一貫性が確保されます。 また、この抽象化によって、ホスト上で実行されている他のプロセスやアプリケーションからコンテナーを分離することができます。
 
-**回復性と自己復旧機能を実装する。** 回復性は、障害から回復するアプリケーションの能力です。 回復性の方法には、たとえば一時的なエラーの再試行やセカンダリ インスタンス (場合によっては別のリージョン) へのフェールオーバーがあります。 詳細については、「[回復性に優れた Azure 用アプリケーションの設計][resiliency]」を参照してください。 問題を即座に把握して機能停止などのシステム障害に対処できるよう、アプリケーションをインストルメント化しましょう。
+**回復性と自己復旧機能を実装する。** 回復性は、障害から回復するアプリケーションの能力です。 回復性の方法には、たとえば一時的なエラーの再試行やセカンダリ インスタンス (場合によっては別のリージョン) へのフェールオーバーがあります。 詳細については、「[Designing reliable Azure applications](../reliability/index.md)」 (信頼性の高い Azure アプリケーションの設計) を参照してください。 問題を即座に把握して機能停止などのシステム障害に対処できるよう、アプリケーションをインストルメント化しましょう。
 
 **運用マニュアルを用意する。** 運用マニュアルまたは "*運用指示書*" は、運用スタッフがシステムを保守するために必要な手順や管理情報を文書化したものです。 その他あらゆる運用シナリオが文書化されるほか、サービスの障害など、中断が生じたときに役に立つ軽減計画も文書化されます。 この文書を開発プロセスの段階で作成し、以後、最新の状態に保つようにします。 これは随時更新される文書であり、定期的な見直し、テスト、改善が必要となります。
 
@@ -158,7 +158,6 @@ DevOps の詳細については、Visual Studio サイトの「[DevOps とは?][
 [feature-toggles]: https://www.martinfowler.com/articles/feature-toggles.html
 [oms]: https://www.microsoft.com/cloud-platform/operations-management-suite
 [rbac]: /azure/active-directory/role-based-access-control-what-is
-[resiliency]: ../resiliency/index.md
 [resource-manager]: /azure/azure-resource-manager/
 [trunk-based]: https://trunkbaseddevelopment.com/
 [what-is-devops]: https://www.visualstudio.com/learn/what-is-devops/

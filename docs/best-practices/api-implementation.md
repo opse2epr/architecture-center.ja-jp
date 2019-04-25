@@ -8,12 +8,12 @@ ms.topic: best-practice
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
 ms.custom: seodec18
-ms.openlocfilehash: 7a484aa9e4fde8fd5056608ca5dd98aefbc077b7
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: dcbfa528a4fdd640b08b42904ceadb7a802b806e
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58244233"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640925"
 ---
 # <a name="api-implementation"></a>API 実装
 
@@ -708,7 +708,7 @@ Web API の性質により、Web API が正しく動作することを確認す�
 
 - クエリ文字列をテストします。 操作が省略可能なパラメーター (改ページ調整要求など) を受け取ることができる場合は、パラメーターのさまざまな組み合わせと順序をテストします。
 
-- 非同期操作が正常に完了していることを確認します。 Web API がラージ バイナリ オブジェクト (ビデオやオーディオなど) を返す要求のストリーミングをサポートしている場合は、データのストリーミング中にクライアント要求がブロックされていないことを確認します。 Web API が実行時間の長いデータ変更操作のポーリングを実装している場合は、操作の進行に伴って状態が正しく報告されていることを確認します。
+- 非同期操作が正常に完了していることを確認します。 Web API がラージ バイナリ オブジェクト (ビデオやオーディオなど) を返す要求のストリーミングをサポートしている場合は、データのストリーミング中にクライアント要求がブロックされていないことを確認します。 実行時間の長いデータ変更操作のポーリングが Web API によって実装されている場合は、操作の進行に伴って操作からその状態が正しく報告されていることを確認します。
 
 パフォーマンス テストを作成して実行し、Web API が強制下で十分に機能していることを確認します。 Visual Studio Ultimate を使用して、Web パフォーマンスおよびロード テスト プロジェクトを作成できます。 詳細については、[リリース前のアプリケーションでのパフォーマンス テストの実行](https://msdn.microsoft.com/library/dn250793.aspx)に関するページをご覧ください。
 

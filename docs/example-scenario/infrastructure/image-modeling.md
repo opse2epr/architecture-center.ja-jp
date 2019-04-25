@@ -9,12 +9,12 @@ ms.service: architecture-center
 ms.subservice: example-scenario
 ms.custom: cat-team, Linux, HPC
 social_image_url: /azure/architecture/example-scenario/infrastructure/media/architecture-image-modeling.png
-ms.openlocfilehash: 0acfebf0ecdd81becdc939bfd5c4d55184fbae83
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 981d9f01ef12f75d9b292196f754f3a0affa791a
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58245763"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640381"
 ---
 # <a name="accelerate-digital-image-based-modeling-on-azure"></a>Azure でのデジタル イメージベースのモデリングの高速化
 

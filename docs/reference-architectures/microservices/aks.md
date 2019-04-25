@@ -7,20 +7,18 @@ ms.topic: reference-architecture
 ms.service: architecture-center
 ms.subservice: reference-architecture
 ms.custom: microservices
-ms.openlocfilehash: 535c53faa810f74299e715a204e427c8919ce360
-ms.sourcegitcommit: 0a8a60d782facc294f7f78ec0e9033e3ee16bf4a
+ms.openlocfilehash: 3e93a036bdb7cdf9f4e49ae81887063624372a6b
+ms.sourcegitcommit: d58e6b2b891c9c99e951c59f15fce71addcb96b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069026"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533126"
 ---
 # <a name="microservices-architecture-on-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) 上のマイクロサービス アーキテクチャ
 
 この参照アーキテクチャは、Azure Kubernetes Service (AKS) にデプロイされたマイクロサービス アプリケーションを示します。 ここには、ほとんどのデプロイの出発点にすることができる基本的な AKS 構成が示されています。 この記事では、Kubernetes の基本的な知識を前提にしています。 この記事は主に、AKS 上でマイクロサービス アーキテクチャを実行するためのインフラストラクチャと DevOps に関する考慮事項に重点を置いています。 マイクロサービスを設計する方法については、「[Azure でのマイクロサービスの構築](../../microservices/index.md)」を参照してください。
 
-![GitHub ロゴ](../../_images/github.png) このアーキテクチャのリファレンス実装は、[GitHub](https://github.com/mspnp/microservices-reference-implementation) で入手できます。
-
-
+![GitHub ロゴ](../../_images/github.png) このアーキテクチャのリファレンス実装は、[GitHub][ri] で入手できます。
 
 ![AKS の参照アーキテクチャ](./_images/aks.png)
 
@@ -202,7 +200,7 @@ AKS では、これらの 2 つの RBAC メカニズムが統合されます。 
 
 - "Azure Kubernetes Service クラスター管理者ロール" には、クラスター管理者の資格情報をダウンロードするためのアクセス許可があります。 このロールにはクラスター管理者のみを割り当てる必要があります。
 
-- "Azure Kubernetes Service クラスター ユーザー ロール" には、クラスター ユーザーの資格情報をダウンロードするためのアクセス許可があります。 このロールには管理者以外のユーザーを割り当てることができます。 このロールは、クラスター内の Kubernetes リソースに対する特定のどのアクセス許可も提供しません。ユーザーが API サーバーに接続できるようにするだけです。 
+- "Azure Kubernetes Service クラスター ユーザー ロール" には、クラスター ユーザーの資格情報をダウンロードするためのアクセス許可があります。 このロールには管理者以外のユーザーを割り当てることができます。 このロールは、クラスター内の Kubernetes リソースに対する特定のどのアクセス許可も提供しません。ユーザーが API サーバーに接続できるようにするだけです。
 
 RBAC ポリシー (Kubernetes と Azure の両方) を定義する場合は、組織内のロールについて考慮してください。
 
@@ -259,109 +257,18 @@ Azure Container Registry の機能である ACR タスクを使用して、イ�
 マイクロサービス アーキテクチャのための堅牢な CI/CD プロセスの目標のいくつかを次に示します。
 
 - 各チームは、他のチームに影響を与えたり妨害したりすることなく、独立に所有するサービスを構築およびデプロイできます。
-
 - サービスの新しいバージョンは、運用環境にデプロイされる前に、検証のために開発/テスト/QA 環境にデプロイされます。 品質ゲートは、各段階で適用されます。
-
 - サービスの新しいバージョンは、以前のバージョンと並行してデプロイできます。
-
 - 十分なアクセス制御ポリシーが設定されています。
+- コンテナー化されたワークロードの場合、運用環境にデプロイされているコンテナー イメージを信頼できます。
 
-- 運用環境にデプロイされているコンテナー イメージを信頼できます。
+問題の詳細については、「[CI/CD for microservices architectures](../../microservices/ci-cd.md)」 (マイクロサービス アーキテクチャ用の CI/CD) を参照してください。
 
-### <a name="isolation-of-environments"></a>環境の分離
+具体的な推奨事項とベスト プラクティスについては、[Kubernetes 上でのマイクロサービス用の CI/CD](../../microservices/ci-cd-kubernetes.md)に関するページを参照してください。
 
-開発、スモーク テスト、統合テスト、ロード テスト、最後に運用のための環境を含め、サービスをデプロイするための複数の環境が存在します。 これらの環境には、あるレベルの分離が必要です。 Kubernetes では、物理的な分離と論理的な分離のどちらかを選択できます。 物理的な分離は、個別のクラスターにデプロイすることを示します。 論理的な分離では、先に説明したように、名前空間とポリシーを使用します。
+## <a name="deploy-the-solution"></a>ソリューションのデプロイ方法
 
-開発/テスト環境のための個別のクラスターと共に、専用の運用クラスターを作成することをお勧めします。 開発/テスト クラスター内の環境を分離するには、論理的な分離を使用します。 開発/テスト クラスターにデプロイされたサービスには、ビジネス データを保持するデータ ストアへのアクセス権を与えるべきではありません。 
+このアーキテクチャの参照実装をデプロイするには、[GitHub リポジトリ][ri-deploy]の手順に従ってください。
 
-### <a name="helm"></a>Helm
-
-Helm を使用してサービスの構築やデプロイを管理することを考慮してください。 CI/CD に役立つ Helm の機能には、次のものがあります。
-
-- 特定のマイクロサービスのすべての Kubernetes オブジェクトを 1 つの Helm グラフに整理します。
-- 一連の kubectl コマンドではなく、1 つの helm コマンドとしてグラフをデプロイします。
-- 以前のバージョンにロールバックする機能と共にセマンティック バージョニングを使用して、更新プログラムやリビジョンを追跡します。
-- 多数のファイルにわたる情報の複製 (ラベルやセレクターなど) を回避するためにテンプレートを使用します。
-- グラフ間の依存関係を管理します。
-- グラフを Helm リポジトリ (Azure Container Registry など) に発行し、それをビルド パイプラインと統合します。
-
-Helm リポジトリとしての Container Registry の使用の詳細については、「[アプリケーションのグラフに Helm リポジトリとして Azure Container Registry を使用する](/azure/container-registry/container-registry-helm-repos)」を参照してください。
-
-### <a name="cicd-workflow"></a>CI/CD ワークフロー
-
-CI/CD ワークフローを作成する前に、コード ベースがどのように構造化され、管理されるかを理解しておく必要があります。
-
-- チームは、別個のリポジトリで作業するのか、単一のリポジトリで作業するのか。
-- 使用するブランチ戦略は何か。
-- 運用環境にコードをプッシュできるのは誰か。 リリース マネージャー ロールは存在するのか。
-
-単一リポジトリ アプローチのほうが支持されていますが、どちらにも長所と短所があります。
-
-| &nbsp; | 単一のリポジトリ | 複数のリポジトリ |
-|--------|----------|----------------|
-| **長所** | コードの共有<br/>コードとツールの標準化が容易<br/>コードのリファクタリングが容易<br/>探しやすさ - コードの単一のビュー<br/> | 各チームの所有権が明確<br/>マージ競合の可能性が少ない<br/>マイクロサービスを強制的に分離するのに役立つ |
-| **課題** | 共有コードの変更が複数のマイクロサービスに影響する可能性がある<br/>マージ競合の可能性が大きい<br/>大規模なコード ベースに合うようにツールを拡張する必要がある<br/>アクセス制御<br/>複雑なデプロイ プロセス | コードの共有が難しい<br/>コーディング規約の適用が難しい<br/>依存関係の管理<br/>コード ベースが拡散して探しにくい<br/>共有インフラストラクチャの欠如
-
-このセクションでは、次の前提に基づく可能な CI/CD ワークフローを示します。
-
-- コード リポジトリは単一リポジトリであり、フォルダーがマイクロサービス別に整理されています。
-- チームのブランチ戦略は、[トランクベース開発](https://trunkbaseddevelopment.com/)に基づいています。
-- チームは、[Azure Pipelines](/azure/devops/pipelines) を使用して CI/CD プロセスを実行します。
-- チームは、Azure Container Registry の[名前空間](/azure/container-registry/container-registry-best-practices#repository-namespaces)を使用して、運用するために承認されたイメージとまだテスト中であるイメージを分離します。
-
-この例では、開発者は Delivery Service と呼ばれるマイクロサービスを処理します  (この名前は、[こちら](../../microservices/design/index.md#scenario)で説明されているリファレンス実装に由来します)。新機能の開発中に、開発者は、機能ブランチにコードをチェックインします。
-
-![CI/CD ワークフロー](./_images/aks-cicd-1.png)
-
-このブランチにコミットをプッシュすると、マイクロサービス用の CI ビルドがトリガーされます。 慣例により、機能ブランチは `feature/*` と名付けられます。 [ビルド定義ファイル](/azure/devops/pipelines/yaml-schema)に、ブランチ名とソース パスでフィルター処理するトリガーが含まれます。 このアプローチを使用して、各チームは、専用のビルド パイプラインを持つことができます。
-
-```yaml
-trigger:
-  batch: true
-  branches:
-    include:
-    - master
-    - feature/*
-
-    exclude:
-    - feature/experimental/*
-
-  paths:
-     include:
-     - /src/shipping/delivery/
-```
-
-ワークフローのこの時点で、CI ビルドでは、いくつかの最小限のコードの検証が実行されます。
-
-1. コードのビルド
-1. 単体テストを実行する
-
-ここでの考え方は、ビルド時間を短くして、開発者がすばやくフィードバックを取得できるようにすることです。 開発者は、機能をマスターにマージする準備ができたら、PR を開きます。 これにより、いくつかの追加のチェックを実行する別の CI ビルドがトリガーされます。
-
-1. コードのビルド
-1. 単体テストを実行する
-1. ランタイム コンテナー イメージをビルドする
-1. イメージの脆弱性スキャンを実行する
-
-![CI/CD ワークフロー](./_images/aks-cicd-2.png)
-
-> [!NOTE]
-> Azure Repos では、ブランチを保護するための[ポリシー](/azure/devops/repos/git/branch-policies)を定義できます。 たとえば、マスターにマージするには、CI ビルドの成功に加え、承認者のサインオフが必要であることをポリシーで要求できます。
-
-ある時点で、チームは、この Delivery サービスの新しいバージョンをデプロイする準備が整います。 これを行うには、リリース マネージャーが `release/<microservice name>/<semver>` という名前付けパターンを使用して、マスターからブランチを作成します。 たとえば、「 `release/delivery/v1.0.2` 」のように入力します。
-これにより、これまでのすべての手順に加え、以下を実行する完全な CI ビルドがトリガーされます。
-
-1. Docker イメージを Azure Container Registry にプッシュします。 イメージには、ブランチ名から取得されたバージョン番号がタグ付けされます。
-2. `helm package` を実行して、Helm チャートをパッケージ化します。
-3. `az acr helm push` を実行することで、Helm パッケージを Container Registry にプッシュします。
-
-このビルドが成功したと仮定すると、Azure Pipelines の[リリース パイプライン](/azure/devops/pipelines/release/what-is-release-management)を使用するデプロイ プロセスがトリガーされます。 このパイプラインでは、
-
-1. `helm upgrade` を実行して、Helm チャートを QA 環境にデプロイします。
-1. パッケージが運用環境に移動される前に、承認者がサインオフする。 「[Release deployment control using approvals (承認を使用したリリース デプロイ制御)](/azure/devops/pipelines/release/approvals/approvals)」をご覧ください。
-1. Docker イメージを Azure Container Registry 内の運用名前空間用に再度タグ付けします。 たとえば、現在のタグが `myrepo.azurecr.io/delivery:v1.0.2` の場合、運用タグは `myrepo.azurecr.io/prod/delivery:v1.0.2` になります。
-1. `helm upgrade` を実行して、Helm チャートを運用環境にデプロイします。
-
-![CI/CD ワークフロー](./_images/aks-cicd-3.png)
-
-単一リポジトリであっても、チームが短時間でデプロイできるように、これらのタスクのスコープを個々のマイクロサービスに設定できることを覚えておくことが重要です。 このプロセスには、いくつか手動の手順があります。PR の承認、リリース ブランチの作成、および運用クラスターへのデプロイの承認です。 これらの手順は、ポリシーによって手動で行われます。組織が望むのであれば、完全に自動化することもできます。
+[ri]: https://github.com/mspnp/microservices-reference-implementation
+[ri-deploy]: https://github.com/mspnp/microservices-reference-implementation/blob/master/deployment.md

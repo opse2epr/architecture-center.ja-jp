@@ -6,12 +6,12 @@ ms.date: 03/06/2019
 ms.topic: guide
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
-ms.openlocfilehash: 1020e938a04c6a82e6cc831e6620ec17c9a10cc7
-ms.sourcegitcommit: 9854bd27fb5cf92041bbfb743d43045cd3552a69
+ms.openlocfilehash: e4c81add1a97254f427d67584ff7e2a4799f84a9
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58503232"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640908"
 ---
 # <a name="what-are-the-machine-learning-products-at-microsoft"></a>Microsoft の機械学習製品とは
 
@@ -63,7 +63,7 @@ Azure クラウドでの機械学習には、次の選択肢があります。
 
 Azure Machine Learning service は、Python と CLI を使用して機械学習モデルをクラウド規模でトレーニング、デプロイ、および管理する場合に使用します。
 
-[無料版または有料版の Azure Machine Learning service](http://aka.ms/AMLFree) をお試しください。
+[無料版または有料版の Azure Machine Learning service](https://aka.ms/AMLFree) をお試しください。
 
 |||
 |-|-|
@@ -190,5 +190,5 @@ Windows ML は、Windows アプリケーション内でトレーニング済み�
 
 ## <a name="next-steps"></a>次の手順
 
-- Microsoft から入手できるすべての人工知能 (AI) 開発製品の詳細については、「[Microsoft AI プラットフォーム](https://www.microsoft.com/ai)」を参照してください。
+- Microsoft から入手できるすべての人工知能 (AI) 開発製品の詳細については、[Microsoft AI プラットフォーム](https://www.microsoft.com/ai)を参照してください。
 - AI ソリューションを開発する方法のトレーニングについては、「[Microsoft AI スクール](https://aischool.microsoft.com/learning-paths)」を参照してください。

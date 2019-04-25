@@ -8,16 +8,16 @@ ms.topic: checklist
 ms.service: architecture-center
 ms.subservice: cloud-design-principles
 ms.custom: resiliency, checklist
-ms.openlocfilehash: 647a17feb347fbb23e9ffa015ab9d640e8864439
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: db42bd259bf71ef2ffa3e9efc5e4cd6ba2078e6b
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58241773"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639701"
 ---
 # <a name="resiliency-checklist-for-specific-azure-services"></a>特定の Azure サービスの回復性のチェックリスト
 
-回復性とは、障害から回復して引き続き機能するシステムの能力であり、[ソフトウェア品質の重要な要素](../guide/pillars.md)の 1 つです。 各テクノロジには独自の障害モードがあり、アプリケーションの設計および実装の際に考慮する必要があります。 このチェックリストを使用して、個々の Azure サービスの回復性の考慮事項を確認します。 また、[一般的な回復性のチェックリスト](./resiliency.md)も確認します。
+回復性とは、障害から回復して動作を続行する、システムの能力です。 各テクノロジには独自の障害モードがあり、アプリケーションの設計および実装の際に考慮する必要があります。 このチェックリストを使用して、個々の Azure サービスの回復性の考慮事項を確認します。 回復性があるアプリケーションの設計の詳細については、[信頼性の高い Azure アプリケーションの設計](../reliability/index.md)に関するページを参照してください。
 
 ## <a name="app-service"></a>App Service
 

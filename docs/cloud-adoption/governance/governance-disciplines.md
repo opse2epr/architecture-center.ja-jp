@@ -9,12 +9,12 @@ description: CAF 内のガバナンス コンテンツの概要
 author: BrianBlanchard
 layout: LandingPage
 ms.topic: landing-page
-ms.openlocfilehash: 80bdfc6f55b76fc3ae57d8fc25ce68c385eaa009
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: ddd7f5e4b7e79ebe2ddf87be7421b6c4691aced1
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58241683"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639871"
 ---
 # <a name="the-five-disciplines-of-cloud-governance"></a>クラウド ガバナンスの 5 つの規範
 
@@ -26,7 +26,7 @@ ms.locfileid: "58241683"
         <div class="cardPadding" style="padding-bottom:10px;">
             <div class="card" style="padding-bottom:10px;">
                 <div class="cardText" style="padding-left:0px;">
-ビジネス プロセスまたは技術プラットフォームの変更にはリスクが伴います。 そのメンバーがクラウド管理人と呼ばれることもあるクラウド ガバナンス チームの任務は、これらのリスクを軽減し、導入やイノベーションの取り組みをできるだけ途切れさせないようにすることです。<br/><br/>CAF ガバナンス モデルでは、<a href="#corporate-policy">企業ポリシーの策定</a>と<a href="#disciplines-of-cloud-governance">クラウド ガバナンスの規範</a>に重点を置くことによって、(選択したクラウド プラットフォームに関係なく) これらの決定を導きます。 <a href="#actionable-journeys">アクションにつながる設計ガイド</a>は、Azure サービスを使用してこのモデルを実証します。 この記事は、CAF ガバナンス モデルの 5 つの規範のランディング ページとして機能します。
+ビジネス プロセスまたは技術プラットフォームの変更にはリスクが伴います。 そのメンバーがクラウド管理人と呼ばれることもあるクラウド ガバナンス チームの任務は、これらのリスクを軽減し、導入やイノベーションの取り組みをできるだけ途切れさせないようにすることです。<br/><br/>CAF ガバナンス モデルでは、企業ポリシーの策定と<a href="#disciplines-of-cloud-governance">クラウド ガバナンスの規範</a>に重点を置くことによって、(選択したクラウド プラットフォームに関係なく) これらの決定を導きます。 <a href="./journeys/overview.md">アクションにつながる工程</a>は、Azure サービスを使用してこのモデルを実証します。 この記事は、CAF ガバナンス モデルの 5 つの規範のランディング ページとして機能します。
                 </div>
             </div>
         </div>

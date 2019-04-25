@@ -9,12 +9,12 @@ ms.devlang: R
 ms.topic: article
 ms.date: 03/19/2019
 ms.author: jepeach
-ms.openlocfilehash: a14c8ce76f78baa7274f22b939eb28cb025ef87e
-ms.sourcegitcommit: 1a3cc91530d56731029ea091db1f15d41ac056af
+ms.openlocfilehash: 7b263d0f49b3b41c9a25b5842de908d5e507780b
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58887904"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640483"
 ---
 # <a name="r-developers-guide-to-azure"></a>Azure での R 開発者向けガイド
 
@@ -67,8 +67,8 @@ DSVM の詳細については、「[Linux および Windows 用の Azure デー�
 
 [Microsoft の ML Services](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview) により、データ サイエンティスト、統計学者、R プログラマは、HDInsight でのスケーラブルで分散型の分析手法にオンデマンドでアクセスできるようになります。  このソリューションは、Azure Blob Storage または Data Lake Storage に読み込まれた事実上すべてのサイズのデータセットで R ベースの分析を行うための最新の機能を備えています。
 
-これは、クラスター全体で R コードをスケーリングできるようにするエンタープライズ級のソリューションです。  Microsoft の [`RevoScaleR`](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
- パッケージの関数を活用することで、HDInsight 上の R スクリプトはクラスター内の多くのノード全体でデータ処理関数を並列で実行することができます。  これにより R がワークステーション上で実行されるシングル スレッドの R で可能な量よりもはるかに多いデータを分析できるようになります。
+これは、クラスター全体で R コードをスケーリングできるようにするエンタープライズ級のソリューションです。  Microsoft の [`RevoScaleR`](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 
+パッケージの関数を活用することで、HDInsight 上の R スクリプトがクラスター内の多くのノード全体でデータ処理関数を並列で実行することができます。  これにより R がワークステーション上で実行されるシングル スレッドの R で可能な量よりもはるかに多いデータを分析できるようになります。
 
 このスケーリングの機能により、HDInsight 上の ML Services が大量のデータ セットを抱える R 開発者に対して最適なオプションとなります。  これにより、クラウドで R スクリプトを実行するための柔軟かつスケーラブルなプラットフォームが提供されます。
 
@@ -109,7 +109,7 @@ Azure Machine Learning Studio で R を使用できるその他の方法は、[`
 
 大規模な R ジョブの場合は、[Azure Batch](https://azure.microsoft.com/services/batch/) を使用できます。  このサービスは、クラウド規模のジョブ スケジューリングとコンピューティング管理を提供するため、仮想マシンの数の増加に合わせて R ワークロードを拡張することができます。  これは汎用的なコンピューティング プラットフォームであるため、Azure Batch で R ジョブを実行するためのオプションがいくつかあります。
 
-1 つ目のオプションは、Microsoft の [`doAzureParallel`](https://github.com/Azure/doAzureParallel) パッケージを使用する方法です。  この R パッケージは `foreach` パッケージのための並列バックエンドです。  これにより、`foreach` ループの反復を Azure Batch クラスター内のノード上で並列に実行できるようになります。  パッケージの概要については、「[doAzureParallel:Take advantage of Azure’s flexible compute directly from your R session](https://azure.microsoft.com/blog/doazureparallel/)」というブログ投稿を参照してください。
+1 つ目のオプションは、Microsoft の [`doAzureParallel`](https://github.com/Azure/doAzureParallel) パッケージを使用する方法です。  この R パッケージは `foreach` パッケージのための並列バックエンドです。  これにより、`foreach` ループの反復を Azure Batch クラスター内のノード上で並列に実行できるようになります。  パッケージの概要については、「[doAzureParallel: Take advantage of Azure’s flexible compute directly from your R session](https://azure.microsoft.com/blog/doazureparallel/)」 (R セッションから直接 Azure の柔軟なコンピューティングを利用する) ブログの投稿をご覧ください。
 
 Azure Batch で R スクリプトを実行する別のオプションが、Azure portal の Batch App として自分のコードを "RScript.exe" でバンドルする方法です。  詳細なチュートリアルについては、「[R Workloads on Azure Batch](https://azure.microsoft.com/blog/r-workloads-on-azure-batch/)」を参照してください。
 
@@ -128,7 +128,6 @@ Azure Notebooks の無料サービス階層は、各ノートブックのプロ�
 この機能は、ストアド プロシージャ、R のステートメントを含む T-SQL スクリプト、または T-SQL を含む R コードのいずれかとして SQL Server データベース内で R コードを実行できる埋め込みの予測分析とデータ サイエンス エンジンを提供します。  データベースからデータを抽出して R 環境に読み込むのではなく、R コードを直接データベースに読み込んで、データと共にすぐに実行させます。
 
 Machine Learning Services は 2016 以降、オンプレミスの SQL Server の一部となっていますが、Azure SQL Database に対しては比較的新しいものです。  現在は[限定プレビュー](https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services?view=sql-server-2017#azure-sql-database-roadmap)中ですが、今後も進化し続けます。
-
 
 ### <a name="next-steps"></a>次の手順
 

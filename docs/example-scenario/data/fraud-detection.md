@@ -8,12 +8,12 @@ ms.topic: example-scenario
 ms.service: architecture-center
 ms.subservice: example-scenario
 social_image_url: /azure/architecture/example-scenario/data/media/architecture-fraud-detection.png
-ms.openlocfilehash: b10838635cb592eb93d35ce745832c55a6daae8b
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: fc2222874b807a53b5e575973aa6dd4eca63fa3b
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58245793"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640051"
 ---
 # <a name="real-time-fraud-detection-on-azure"></a>Azure におけるリアルタイムでの不正検出
 
@@ -62,8 +62,6 @@ Event Hubs、Stream Analytics などのフル マネージド Azure サービス
 
 Azure Monitor には、さまざまな Azure サービスにわたって監視するための統合ユーザー インターフェイスが用意されています。 詳細については、[Microsoft Azure での監視](/azure/monitoring-and-diagnostics/monitoring-overview)に関するページをご覧ください。 Event Hubs と Stream Analytics は両方とも、Azure Monitor に統合されています。
 
-他の可用性に関する考慮事項については、Azure アーキテクチャ センターの「[可用性のチェックリスト][availability]」を参照してください。
-
 ### <a name="scalability"></a>スケーラビリティ
 
 このシナリオのコンポーネントは、ハイパースケール インジェストと超並列リアルタイム分析を実現するように設計されています。 Azure Event Hubs は高度にスケーラブルで、毎秒数百万のイベントを、短い待機時間で受け取って処理できます。 Event Hubs では、スループット ユニット数が、使用量のニーズに合わせて[自動的にスケールアップ](/azure/event-hubs/event-hubs-auto-inflate)できます。 Azure Stream Analytics では、多くのソースからの大量のストリーミング データを分析できます。 Stream Analytics をスケールアップするには、ご自身のストリーミング ジョブを実行するために割り当てられている[ストリーミング ユニット](/azure/stream-analytics/stream-analytics-streaming-unit-consumption)数を増やします。
@@ -78,7 +76,7 @@ Azure Event Hubs では、Shared Access Signature (SAS) トークンとイベン
 
 ### <a name="resiliency"></a>回復性
 
-回復性に優れたソリューションの設計に関する一般的なガイダンスについては、「[回復性に優れた Azure 用アプリケーションの設計][resiliency]」を参照してください。
+回復性があるソリューションの設計に関する一般的なガイダンスについては、「[Designing reliable Azure applications](../../reliability/index.md)」 (信頼性の高い Azure アプリケーションの設計) を参照してください。
 
 ## <a name="deploy-the-scenario"></a>シナリオのデプロイ
 
@@ -111,7 +109,5 @@ Azure Event Hubs では、Shared Access Signature (SAS) トークンとイベン
 [docs-r-server-sample-solutions]: /machine-learning-server/r/sample-solutions
 [r-server-fraud-detection]: https://microsoft.github.io/r-server-fraud-detection/
 [technet-fraud-detection]: https://blogs.technet.microsoft.com/machinelearning/2017/06/28/using-azure-data-lake-and-r-for-fraud-detection/
-[availability]: /azure/architecture/checklist/availability
 [scalability]: /azure/architecture/checklist/scalability
-[resiliency]: ../../resiliency/index.md
 [security]: /azure/security/

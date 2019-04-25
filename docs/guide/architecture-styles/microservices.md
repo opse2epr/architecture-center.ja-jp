@@ -8,12 +8,12 @@ ms.topic: guide
 ms.service: architecture-center
 ms.subservice: reference-architecture
 ms.custom: seojan19, microservices
-ms.openlocfilehash: cc72f61003f4146fd65e501feebda0c0d1d27993
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 87a9dd31b6d935dd11a5a2a2950b6de11f337741
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58245093"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639973"
 ---
 # <a name="microservices-architecture-style"></a>マイクロサービス アーキテクチャ スタイル
 
@@ -71,7 +71,7 @@ API ゲートウェイを使用することには次のようなメリットが�
 
 - **集中的な小規模チーム**。 チームは 1 つのサービスに専念できます。 各サービスの範囲が狭いことでコード ベースが理解しやすく、新しいチーム メンバーを増員しやすくなります。
 
-- **障害の分離**。 サービスがダウンしても、アプリケーション全体を停止することはありません。 ただし、無料で回復性を得られるという意味ではありません。 回復性のベスト プラクティスと設計パターンに従う必要があります。 「[Designing resilient applications for Azure (回復性に優れた Azure 用アプリケーションの設計)][resiliency-overview]」をご覧ください。
+- **障害の分離**。 サービスがダウンしても、アプリケーション全体を停止することはありません。 ただし、無料で回復性を得られるという意味ではありません。 回復性のベスト プラクティスと設計パターンに従う必要があります。 「[Designing reliable Azure applications][resiliency-overview]」 (信頼性の高い Azure アプリケーションの設計) を参照してください。
 
 - **混在テクノロジ スタック**。 チームは、自分たちのサービスに最適なテクノロジを選択できます。
 
@@ -113,7 +113,7 @@ API ゲートウェイを使用することには次のようなメリットが�
 
 - サービスには、疎結合と機能の高い凝集度が必要です。 まとめて変更される可能性がある機能は、まとめてパッケージ化してデプロイする必要があります。 それらの機能が別々のサービスに格納された場合、1 つのサービスの変更には他のサービスの更新が必要であるため、結果として密接に結合されることになります。 2 つのサービス間で過度に通信が行われると、密接な結合と低い凝集度の問題が生じる可能性があります。
 
-- 障害を分離します。 回復性戦略を使用して、サービス内の障害が連鎖しないようにします。 「[Resiliency patterns (回復性パターン)][resiliency-patterns]」と「[Designing resilient applications (回復性に優れたアプリケーションの設計)][resiliency-overview]」をご覧ください。
+- 障害を分離します。 回復性戦略を使用して、サービス内の障害が連鎖しないようにします。 「[Resiliency patterns][resiliency-patterns]」(回復性のパターン) のページと[信頼性の高いアプリケーションの設計][resiliency-overview]に関するページをご覧ください。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -121,5 +121,5 @@ Azure でのマイクロサービス アーキテクチャの構築に関する�
 
 <!-- links -->
 
-[resiliency-overview]: ../../resiliency/index.md
+[resiliency-overview]: ../../reliability/index.md
 [resiliency-patterns]: ../../patterns/category/resiliency.md

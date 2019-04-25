@@ -3,12 +3,12 @@ title: ダッシュボードを使用して Azure Databricks のメトリック�
 description: Grafana ダッシュボードをデプロイして Azure Databricks でのパフォーマンスを監視する方法
 author: petertaylor9999
 ms.date: 03/26/2019
-ms.openlocfilehash: 36fcd93f6ca757e8e750d0fcbbdf0311c08560b0
-ms.sourcegitcommit: 1a3cc91530d56731029ea091db1f15d41ac056af
+ms.openlocfilehash: a84203a9188848e6363a80ac455332e8f6a73cda
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58887830"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640313"
 ---
 # <a name="use-dashboards-to-visualize-azure-databricks-metrics"></a>ダッシュボードを使用して Azure Databricks のメトリックを視覚化する
 
@@ -20,7 +20,7 @@ ms.locfileid: "58887830"
 
 ![ダッシュボードのスクリーンショット](./_images/dashboard-screenshot.png)
 
-## <a name="prequisites"></a>前提条件
+## <a name="prerequisites"></a>前提条件
 
 [Github リポジトリ](https://github.com/mspnp/spark-monitoring)を複製し、[デプロイ手順に従って](./configure-cluster.md)、Azure Log Analytics ワークスペースにログを送信するように Azure Databricks ライブラリ用に Azure Monitor のログ記録を構築して構成します。
 
@@ -40,7 +40,7 @@ Azure Log Analytics ワークスペースをデプロイするには、以下の
     az group deployment create --resource-group <resource-group-name> --template-file logAnalyticsDeploy.json --parameters location='East US' serviceTier='Standalone'
     ```
 
-このテンプレートはワークスペースを作成し、さらに、ダッシュボードで使用される定義済みクエリのセットも作成します。
+このテンプレートではワークスペースを作成し、さらに、ダッシュボードで使用される定義済みクエリのセットも作成します。
 
 ## <a name="deploy-grafana-in-a-virtual-machine"></a>Grafana を仮想マシンにデプロイする
 
@@ -81,7 +81,7 @@ Grafana はオープン ソース プロジェクトです。これをデプロ�
 
 1. Azure portal で、VM を選択して **[概要]** をクリックします。
 1. パブリック IP アドレスをコピーします。
-1. Web ブラウザーを開き、次の URL に移動します:`http://<IP addresss>:3000`。
+1. Web ブラウザーを開き、次の URL に移動します:`http://<IP address>:3000`。
 1. Grafana ログイン画面で、ユーザー名として **admin** と入力し、前の手順で取得した Grafana のパスワードを使用します。
 1. ログインしたら、**[Configuration]** (歯車のアイコン) を選択します。
 1. **[Server Admin]** を選択します。

@@ -7,22 +7,20 @@ ms.topic: article
 ms.service: architecture-center
 ms.subservice: cloud-design-principles
 ms.custom: resiliency
-ms.openlocfilehash: 6d0f58161c5b9d5922c21f24b1b1a50bab836bb1
-ms.sourcegitcommit: 1b50810208354577b00e89e5c031b774b02736e2
+ms.openlocfilehash: 0d89570ca42aa087a9c18148b5a4019b6f348e6b
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54484280"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640976"
 ---
-# <a name="failure-mode-analysis"></a>障害モード分析
-
-[!INCLUDE [header](../_includes/header.md)]
+# <a name="failure-mode-analysis-for-azure-applications"></a>Azure アプリケーション用の障害モード分析
 
 障害モード分析 (FMA) は、システムで考えられる障害点を特定することによって、システムに回復力を持たせるためのプロセスです。 FMA をアーキテクチャおよび設計フェーズで行って、最初からシステムに障害復旧を組み込むことができるようにする必要があります。
 
 FMA の一般的な実施プロセスを次に示します。
 
-1. システム内のすべてのコンポーネントを明らかにします。 ID プロバイダーやサード パーティのサービスなど、外部の依存関係を含みます。
+1. システム内のすべてのコンポーネントを明らかにします。 ID プロバイダーやサード パーティーのサービスなど、外部依存関係を含みます。
 2. コンポーネントごとに発生する可能性のある障害を特定します。 1 つのコンポーネントに複数の障害モードが存在する場合があります。 たとえば、影響と可能な軽減策が異なるため、読み取り障害と書き込み障害は別のものとして検討する必要があります。
 3. 総合的なリスクに従って、各障害モードを評価します。 次の点を考慮します。
 

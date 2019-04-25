@@ -3,18 +3,18 @@ title: メトリックを Azure Monitor に送信するよう Azure Databricks �
 description: Azure Log Analytics でメトリックの監視とデータのログ記録を有効にするための Scala ライブラリ
 author: petertaylor9999
 ms.date: 03/26/2019
-ms.openlocfilehash: af6b6433f87964ac60c179ecf498e54129344126
-ms.sourcegitcommit: 9854bd27fb5cf92041bbfb743d43045cd3552a69
+ms.openlocfilehash: f2fc1fd19da661b74ddf032dd1d5153ce575345c
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58503438"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639888"
 ---
 <!-- markdownlint-disable MD040 -->
 
 # <a name="configure-azure-databricks-to-send-metrics-to-azure-monitor"></a>メトリックを Azure Monitor に送信するよう Azure Databricks を構成する
 
-この記事では、[Log Analytics ワークスペース](/azure/azure-monitor/platform/manage-access)にメトリックを送信するように Azure Databricks クラスターを構成する方法について説明します。 [Azure Databricks 監視ライブラリ](https://github.com/mspnp/spark-monitoring)が使用されます。これは GitHub から入手できます。 前提条件として Java、Scala、および Maven について理解していることが推奨されます。
+この記事では、[Log Analytics ワークスペース](/azure/azure-monitor/platform/manage-access)にメトリックを送信するように Azure Databricks クラスターを構成する方法について説明します。 [Azure Databricks 監視ライブラリ](https://github.com/mspnp/spark-monitoring)が使用されます。これは GitHub から入手できます。 前提条件として Java、Scala、Maven について理解することをお勧めします。
 
 ## <a name="about-the-azure-databricks-monitoring-library"></a>Azure Databricks 監視ライブラリについて
 

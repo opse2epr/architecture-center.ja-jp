@@ -9,12 +9,12 @@ ms.subservice: reference-architecture
 pnp.series.title: Manage Identity in Multitenant Applications
 pnp.series.prev: claims
 pnp.series.next: app-roles
-ms.openlocfilehash: a1ec441b731ba7f2166f9115452b052ec944444f
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: eb4e65b20ec3339b633b65d2adad768e98d1bdbb
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58245043"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640602"
 ---
 # <a name="tenant-sign-up-and-onboarding"></a>テナントのサインアップとオンボード
 
@@ -63,7 +63,7 @@ Azure AD に対して認証するには、アプリケーションがユーザ�
 
 これらのボタンをクリックすると、 `AccountController` クラスのアクションが呼び出されます。
 
-`SignIn` アクションは、**ChallegeResult** を返します。これにより、OpenID Connect ミドルウェアが認証エンドポイントにリダイレクトされます。 ASP.NET Core では、これが認証をトリガーする既定の方法となっています。
+`SignIn` アクションから、**ChallengeResult** が返されます。これにより、OpenID Connect ミドルウェアが認証エンドポイントにリダイレクトされます。 ASP.NET Core では、これが認証をトリガーする既定の方法となっています。
 
 ```csharp
 [AllowAnonymous]

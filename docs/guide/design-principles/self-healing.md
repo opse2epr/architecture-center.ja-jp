@@ -8,12 +8,12 @@ ms.topic: guide
 ms.service: architecture-center
 ms.subservice: reference-architecture
 ms.custom: seojan19
-ms.openlocfilehash: 5e5af0be41fa892e490d556ef4286d5367144fd9
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 84bc6e5c8d78517e3dc1dc0ee8d250346a33ce43
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58249507"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59641197"
 ---
 # <a name="design-for-self-healing"></a>自己復旧の設計
 
@@ -59,7 +59,7 @@ ms.locfileid: "58249507"
 
 **Chaos エンジニアリングを利用する**。 Chaos エンジニアリングは、実稼働インスタンスに障害や異常な状態をランダムに挿入することで、フォールト挿入の概念を拡張するものです。
 
-アプリケーションを自己復旧させるための構造化されたアプローチについては、[回復力のある Azure アプリケーションの設計][resiliency-overview]に関するページをご覧ください。
+アプリケーションを自己復旧させるための構造化されたアプローチについては、[信頼性の高い Azure 用アプリケーションの設計][resiliency-overview]に関するページをご覧ください。
 
 <!-- links -->
 
@@ -67,7 +67,7 @@ ms.locfileid: "58249507"
 [compensating-transactions]: ../../patterns/compensating-transaction.md
 [leader-election]: ../../patterns/leader-election.md
 [load-level]: ../../patterns/queue-based-load-leveling.md
-[resiliency-overview]: ../../resiliency/index.md
+[resiliency-overview]: ../../reliability/index.md
 [retry]: ../../patterns/retry.md
 [throttle]: ../../patterns/throttling.md
 [transient-fault-handling]: ../../best-practices/transient-faults.md

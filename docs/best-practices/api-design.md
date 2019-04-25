@@ -8,12 +8,12 @@ ms.topic: best-practice
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
 ms.custom: seodec18
-ms.openlocfilehash: 4b5842c3aac4cea34929ed72ad86071494b1fc1e
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 06090b0862a7c737d9ee93512f851d3fcf2e2d9f
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58241743"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640874"
 ---
 # <a name="api-design"></a>API 設計
 
@@ -97,7 +97,7 @@ https://adventure-works.com/orders
 
 URI には一貫性のある名前付け規則を使用します。 一般に、コレクションを参照する URI には複数形の名詞を使用すると便利です。 コレクションと項目の URI は、階層構造に整理することをお勧めします。 たとえば、`/customers` は customers コレクションのパスであり、`/customers/5` は ID が 5 の顧客のパスです。 この方法は、Web API を直感的に保つのに役立ちます。 また、多くの Web API フレームワークでは、パラメーター化された URI パスに基づいて要求をルーティングできるので、パス `/customers/{id}` のルートを定義できます。
 
-さまざまな種類のリソース間の関係と、これらの関連付けを公開する方法も検討します。 たとえば、`/customers/5/orders` は顧客 5 のすべての注文を表します。 逆方向にし、`/orders/99/customer` などの URI を使用して、注文から顧客への関連付けを表すこともできます。 ただし、このモデルを拡張しすぎると、実装が煩雑になる可能性があります。 より優れたソリューションは、HTTP 応答メッセージの本文に、関連するリソースに誘導できるリンクを含めることです。 このメカニズムについては、[関連リソースへのナビゲーションを可能にする HATEOAS アプローチの使用](#using-the-hateoas-approach-to-enable-navigation-to-related-resources)に関するセクションで詳しく説明します。
+さまざまな種類のリソース間の関係と、これらの関連付けを公開する方法も検討します。 たとえば、`/customers/5/orders` は顧客 5 のすべての注文を表します。 逆方向にし、`/orders/99/customer` などの URI を使用して、注文から顧客への関連付けを表すこともできます。 ただし、このモデルを拡張しすぎると、実装が煩雑になる可能性があります。 より優れたソリューションは、HTTP 応答メッセージの本文に、関連するリソースに誘導できるリンクを含めることです。 このメカニズムについては、「[HATEOAS を使用した関連リソースへのナビゲーションの実現](#use-hateoas-to-enable-navigation-to-related-resources)」のセクションで詳しく説明します。
 
 複雑なシステムでは、クライアント が複数のレベルの関係をナビゲートできるようにする URI (例: `/customers/1/orders/99/products`) を提供したくなる可能性があります。 ただし、将来的にリソース間のリレーションシップが変わる場合、このレベルの複雑さを維持するのは難しく、柔軟性がありません。 代わりに、URI を比較的単純に保つように努めます。 アプリケーションがリソースへの参照を取得したら、この参照を使用してそのリソースに関連する項目を検索できるようにします。 前述のクエリを URI `/customers/1/orders` に置き換えると、顧客 1 のすべての注文を検索でき、次に `/orders/99/products` に置き換えると、この注文の製品を検索できます。
 

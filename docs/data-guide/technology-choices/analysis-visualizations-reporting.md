@@ -7,12 +7,12 @@ ms.topic: guide
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
 ms.custom: data-analytics
-ms.openlocfilehash: 72b889e2fe0d862ab1ff280cea76c2880b0fadc4
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: bfdfeefe36dd44478f407008e2f9f3749f7a70d6
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58245953"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639753"
 ---
 # <a name="choosing-a-data-analytics-technology-in-azure"></a>Azure でのデータ分析とテクノロジの選択
 
@@ -73,7 +73,7 @@ Jupyter Notebook では、Power BI などの BI/レポート ツールでより�
 
 - 多数のデータ ソースに接続して、ドメイン全体に分散したデータのレポートを作成する一元的な場所を提供する必要がありますか。 その場合は、数百のデータ ソースに接続できるオプションを選びます。
 
-- 動的視覚化を外部 Web サイトまたはアプリケーションに埋め込みますか。 その場合は、埋め込み機能を提供するオプションを選びます。
+- 動的視覚化を外部 Web サイトまたはアプリケーションに埋め込みますか? その場合は、埋め込み機能を提供するオプションを選びます。
 
 - オフライン中に視覚化とレポートをデザインしますか。 答えが「はい」の場合は、オフライン機能があるオプションを選びます。
 

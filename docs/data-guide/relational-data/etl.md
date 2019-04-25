@@ -6,12 +6,12 @@ ms.date: 02/12/2018
 ms.topic: guide
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
-ms.openlocfilehash: 1551736d8ef3d2b82eb0a2fdb626330798ec1c65
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: aa578464947e51964fee9859395149b44b47fa00
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58246193"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639990"
 ---
 # <a name="extract-transform-and-load-etl"></a>抽出、変換、読み込み (ETL)
 

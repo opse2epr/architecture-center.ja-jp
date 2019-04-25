@@ -1,29 +1,29 @@
 ---
-title: Active Directory Domain Services (AD DS) を Azure に拡張する
+title: オンプレミスにある Active Directory ドメインを Azure に拡張する
 titleSuffix: Azure Reference Architectures
-description: オンプレミスの Active Directory ドメインを Azure に拡張します。
+description: Azure 仮想ネットワークで Active Directory Domain Services (AD DS) をデプロイします。
 author: telmosampaio
 ms.date: 05/02/2018
 ms.topic: reference-architecture
 ms.service: architecture-center
 ms.subservice: reference-architecture
 ms.custom: seodec18, identity
-ms.openlocfilehash: 67f23ae3676d0fb95ef484fa6dcb7a8bb92e0fa2
-ms.sourcegitcommit: 548374a0133f3caed3934fda6a380c76e6eaecea
+ms.openlocfilehash: c617a0ceba900fc9cd78eff21aadf5c94f6b143b
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420007"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640347"
 ---
-# <a name="extend-active-directory-domain-services-ad-ds-to-azure"></a>Active Directory Domain Services (AD DS) を Azure に拡張する
+# <a name="extend-your-on-premises-active-directory-domain-to-azure"></a>オンプレミスにある Active Directory ドメインを Azure に拡張する
 
-この参照アーキテクチャでは、Active Directory 環境を Azure に拡張し、Active Directory Domain Services (AD DS) を使用して分散認証サービスを提供する方法を示します。 [**このソリューションをデプロイします**](#deploy-the-solution)。
+このアーキテクチャは、分散型の認証サービスを提供するために、オンプレミスの Active Directory ドメインを Azure に拡張する方法を示しています。 [**このソリューションをデプロイします**](#deploy-the-solution)。
 
 ![Active Directory を使用するセキュリティ保護されたハイブリッド ネットワーク アーキテクチャ](./images/adds-extend-domain.png)
 
 "*このアーキテクチャの [Visio ファイル][visio-download]をダウンロードします。*"
 
-AD DS は、ユーザー、コンピューター、アプリケーション、またはセキュリティ ドメインに含まれるその他の ID の認証に使用します。 オンプレミスでホストできますが、アプリケーションがオンプレミスと Azure で部分的にホストされる場合は、Azure でこの機能をレプリケートする方が効率的です。 これにより、クラウドからオンプレミスで実行されている AD DS に返される認証要求とローカルの承認要求の送信が原因の待機時間を削減できます。
+アプリケーションがオンプレミスと Azure で部分的にホストされる場合は、Azure で Active Directory Domain Services (AD DS) をレプリケートする方が効率的です。 これにより、クラウドからオンプレミスで実行されている AD DS に返される認証要求の送信が原因の待機時間を削減できます。
 
 このアーキテクチャは、オンプレミス ネットワークと Azure 仮想ネットワークが VPN または ExpressRoute によって接続されている場合によく使用されます。 また、このアーキテクチャは、双方向レプリケーションをサポートします。つまり、オンプレミスまたはクラウドで変更を行うことができ、両方のソースの一貫性が確保されます。 このアーキテクチャの一般的な用途には、オンプレミスと Azure 間で機能が配布されるハイブリッド アプリケーション、および Active Directory を使用して認証を実行するアプリケーションとサービスがあります。
 

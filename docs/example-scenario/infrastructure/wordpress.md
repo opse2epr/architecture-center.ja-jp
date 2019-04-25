@@ -8,12 +8,12 @@ ms.topic: example-scenario
 ms.service: architecture-center
 ms.subservice: example-scenario
 social_image_url: /azure/architecture/example-scenario/infrastructure/media/secure-scalable-wordpress.png
-ms.openlocfilehash: 6032247dce0d090885bc560d963f1e714d91f69c
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: 4f347f91d5958fb83404856ec5d36d70a7ed0d19
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58244633"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640092"
 ---
 # <a name="highly-scalable-and-secure-wordpress-website"></a>高度にスケーラブルで安全な WordPress Web サイト
 
@@ -72,15 +72,13 @@ ms.locfileid: "58244633"
 
 このシナリオでは VM インスタンスが複数のリージョンにまたがって展開され、WordPress コンテンツの場合は RSYNC によって、MariaDB クラスターの場合はマスター スレーブ レプリケーションによって、2 つのリージョン間でデータが複製されます。
 
-可用性に関する他のトピックについては、Azure アーキテクチャ センターの[可用性のチェックリスト][availability]を参照してください。
-
 ### <a name="scalability"></a>スケーラビリティ
 
 このシナリオでは、各リージョンの 2 つのフロントエンド Web サーバー クラスターのために仮想マシン スケール セットを使用します。 スケール セットにより、顧客の要求に応じて、または定義されているスケジュールに基づいて、フロントエンド アプリケーション層を実行する VM インスタンスの数を自動的にスケーリングできます。 詳細については、[仮想マシン スケール セットでの自動スケールの概要][docs-vmss-autoscale]に関するページをご覧ください。
 
 バックエンドは、可用性セットの MariaDB クラスターです。 詳細については、「[MariaDB (MySQL) クラスター: Azure チュートリアル][mariadb-tutorial]」を参照してください。
 
-スケーラビリティに関する他のトピックについては、Azure アーキテクチャ センターの「[スケーラビリティのチェックリスト][scalability]」をご覧ください。
+スケーラビリティに関する他のトピックについては、Azure アーキテクチャ センターの「スケーラビリティのチェックリスト」 [scalability] を参照してください。
 
 ### <a name="security"></a>セキュリティ
 
@@ -92,7 +90,7 @@ ms.locfileid: "58244633"
 
 このシナリオでは、複数のリージョン、データ レプリケーション、仮想マシン スケール セットと組み合わて、Azure ロード バランサーが使用されます。 これらのネットワーク コンポーネントは、接続されている VM インスタンスにトラフィックを分散します。また、コンポーネントには正常性プローブが含まれ、正常な状態の VM にのみトラフィックが分散されることが保証されます。 これらのネットワーク コンポーネントはすべて、CDN を介してアクセスされます。 トラフィックを中断し、エンドユーザーへのアクセスに影響を及ぼす可能性のある問題に対する回復性が、これによってネットワーク リソースとアプリケーションで実現します。
 
-回復性に優れたシナリオの設計に関する一般的なガイダンスについては、「[回復性に優れた Azure 用アプリケーションの設計][resiliency]」を参照してください。
+回復性があるシナリオの設計に関する一般的なガイダンスについては、「[Designing reliable Azure applications](../../reliability/index.md)」 (信頼性の高い Azure アプリケーションの設計) を参照してください。
 
 ## <a name="pricing"></a>価格
 
@@ -112,6 +110,4 @@ ms.locfileid: "58244633"
 [docs-nsg]: /azure/virtual-network/security-overview
 [security]: /azure/security/
 [availability]: ../../checklist/availability.md
-[resiliency]: /azure/architecture/resiliency/
-[scalability]: /azure/architecture/checklist/scalability
 [pricing]: https://azure.com/e/a8c4809dab444c1ca4870c489fbb196b

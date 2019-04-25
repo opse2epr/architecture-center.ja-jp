@@ -3,12 +3,12 @@ title: Azure Databricks アプリケーション ログを Azure Monitor に送�
 description: カスタム ログとメトリックを Azure Databricks から Azure Monitor に送信する方法
 author: petertaylor9999
 ms.date: 03/26/2019
-ms.openlocfilehash: 49c631687fb3e3bbd807ffbbb49d9c5f6526bfb4
-ms.sourcegitcommit: 9854bd27fb5cf92041bbfb743d43045cd3552a69
+ms.openlocfilehash: ea67122d7871663e8aaf42b7af0043492f63b6b1
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58503435"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639188"
 ---
 # <a name="send-azure-databricks-application-logs-to-azure-monitor"></a>Azure Databricks アプリケーション ログを Azure Monitor に送信する
 

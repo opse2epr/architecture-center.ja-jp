@@ -8,12 +8,12 @@ ms.topic: best-practice
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
 ms.custom: seodec18
-ms.openlocfilehash: 43838592ef4176c28e11b90180727a63b1e1f8f6
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: bb810f549c78d16eabd4a96cd811cdc120cc8b6f
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58241823"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640942"
 ---
 # <a name="data-partitioning-strategies"></a>データのパーティション分割戦略
 
@@ -57,7 +57,7 @@ Elastic Database では、データをシャードレットにマップし、シ
 
 - 一緒に使用するデータを同一のシャードにグループ化し、複数のシャードのデータにアクセスする操作が発生しないようにします。 シャードは、それ自体が SQL データベースであるため、データベース間結合はクライアント側で実行する必要があります。
 
-    SQL Database はデータベース間結合をサポートしませんが、Elastic Database ツールを使用すると、[マルチシャード クエリ](/azure/sql-database/sql-database-elastic-scale-multishard-querying)を実行できます。 マルチシャード クエリでは、各データベースに個々のクエリを送信し、結果をマージします。
+    SQL Database ではデータベース間結合はサポートされていませんが、Elastic Database ツールを使用すると、[マルチシャード クエリ](/azure/sql-database/sql-database-elastic-scale-multishard-querying)を実行できます。 マルチシャード クエリでは、各データベースに個々のクエリを送信し、結果をマージします。
 
 - シャード間に依存関係のあるシステムを設計しないでください。 1 つのデータベース内の参照整合性制約、トリガー、およびストアド プロシージャは、別のデータベースのオブジェクトを参照できません。
 

@@ -9,12 +9,12 @@ ms.service: architecture-center
 ms.subservice: example-scenario
 ms.custom: fasttrack, Linux
 social_image_url: /azure/architecture/example-scenario/infrastructure/media/azure-citrix-sample-diagram.png
-ms.openlocfilehash: 77093cba0e5646146ec9de68655754d9ac1e5461
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: e59e785df80efc9de134d27664ba1581a61dd1d1
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58248487"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640279"
 ---
 # <a name="linux-virtual-desktops-with-citrix"></a>Citrix を使用した Linux 仮想デスクトップ
 
@@ -71,7 +71,7 @@ ms.locfileid: "58248487"
 - [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) は、Microsoft SQL Server データベース エンジンの安定した最新バージョンに基づく、サービスとしてのリレーショナル データベース (DBaaS) です。 これは、Citrix のデータベースをホストするために使用されます。
 - [ExpressRoute](/azure/expressroute/expressroute-introduction) を利用すると、接続プロバイダーが提供するプライベート接続を介して、オンプレミスのネットワークを Microsoft クラウドに拡張できます。
 - Active Directory Domain Services はディレクトリ サービスとユーザー認証に使用されます
-- [Azure 可用性セット](/azure/virtual-machines/windows/tutorial-availability-sets)は、Azure にデプロイされる VM を、クラスター内の複数の分離されたハードウェア ノードに分散させます。 これにより、Azure 内でハードウェアまたはソフトウェアの障害が発生した場合に影響を受けるのは VM のサブセットに限定され、ソリューション全体は引き続き利用可能であり、運用可能であることが保証されます。
+- [Azure 可用性セット](/azure/virtual-machines/windows/tutorial-availability-sets)では、Azure にデプロイされる VM を、確実にクラスター内の複数の分離されたハードウェア ノードを超えて分散させます。 これにより、Azure 内でハードウェアまたはソフトウェアの障害が発生した場合に影響を受けるのは VM のサブセットに限定され、ソリューション全体は引き続き利用可能であり、運用可能であることが保証されます。
 - [Citrix ADC (NetScaler)](https://www.citrix.com/products/citrix-adc) は、アプリケーション固有のトラフィック分析を実行して、Web アプリケーション用のレイヤー 4 からレイヤー 7 (L4-L7) のネットワーク トラフィックをインテリジェントに配布、最適化、保護するアプリケーション配信コントローラーです。
 - [Citrix Storefront](https://www.citrix.com/products/citrix-virtual-apps-and-desktops/citrix-storefront.html) は、セキュリティを強化し、デプロイを簡素化するエンタープライズ アプリ ストアです。他に例を見ない、モダンでほぼネイティブのユーザー エクスペリエンスを、あらゆるプラットフォーム上の Citrix Receiver で提供します。 StoreFront を使用すると、マルチサイトおよびマルチ バージョンの Citrix Virtual Apps and Desktops 環境を簡単に管理できます。
 - [Citrix License Server](https://www.citrix.com/buy/licensing/overview.html) は、Citrix 製品のライセンスを管理します。

@@ -7,16 +7,16 @@ ms.date: 12/07/2018
 ms.topic: design-pattern
 ms.service: architecture-center
 ms.subservice: cloud-fundamentals
-ms.openlocfilehash: 9b931337f7f0e5dc58f83701271c7d3491af5bfd
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: f3d15d65aeab41977e6d30b8141baaa956da29d3
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58248747"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640772"
 ---
 # <a name="publisher-subscriber-pattern"></a>パブリッシャーとサブスクライバーのパターン
 
-送信側と受信側を結合せずに、アプリケーションから複数の対象コンシューマーに対して非同期的にイベントを通知できるようにします。
+送信側と受信側を結合せずに、アプリケーションから関心を持っている複数のコンシューマーに対して非同期的にイベントを通知できるようにします。
 
 **別名**:パブリッシュ/サブスクライブ メッセージング
 

@@ -8,12 +8,12 @@ description: クラウド移行の業務上の妥当性をまとめるときの�
 author: BrianBlanchard
 ms.date: 12/10/2018
 ms.topic: guide
-ms.openlocfilehash: 04c1944498387e2b42c96a600cc69e50cf53d024
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: a2fdb225fb978eaade39850560ca1adbbb3476e7
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58247973"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640653"
 ---
 # <a name="build-a-business-justification-for-cloud-migration"></a>クラウド移行の業務上の妥当性をまとめ
 

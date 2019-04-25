@@ -7,16 +7,14 @@ ms.topic: article
 ms.service: architecture-center
 ms.subservice: cloud-design-principles
 ms.custom: resiliency
-ms.openlocfilehash: 7f207bbc0bb0128126f9b828dc100d43553cb100
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: b58e8fa1cc4955f90e7171e17aaa70ac0cfb7b71
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58242713"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640568"
 ---
-[!INCLUDE [header](../_includes/header.md)]
-
-# <a name="azure-resiliency-technical-guidance-recovery-from-a-region-wide-service-disruption"></a>Azure の回復性に関する技術ガイダンス: リージョン全体のサービス中断からの復旧
+# <a name="recover-from-a-region-wide-service-disruption"></a>リージョン全体でのサービスの中断から復旧する
 
 Azure はリージョンと呼ばれる物理的および論理的な単位に分割されます。 リージョンは、ごく近くにある 1 つ以上のデータセンターで構成されます。
 
@@ -121,7 +119,7 @@ SQL Server 2012 (以降) を Azure Virtual Machines で実行した場合、復�
 
 ### <a name="service-bus"></a>Service Bus
 
-Azure Service Bus は、Azure リージョンにまたがらない一意の名前空間名を使用します。 したがって、最初の要件は代替リージョンで必要なサービス バス名前空間を設定することです。 ただし、キューに置かれたメッセージの持続性についても考慮事項があります。 Azure リージョン間でメッセージをレプリケートするにはいくつかの方法があります。 これらのレプリケーション方法とその他のディザスター リカバリー計画の詳細については、「[Service Bus の障害および災害に対するアプリケーションの保護のベスト プラクティス](/azure/service-bus-messaging/service-bus-outages-disasters/)」をご覧ください。 その他の可用性の考慮事項については、 [Service Bus (可用性)](recovery-local-failures.md#other-azure-platform-services)に関するページを参照してください。
+Azure Service Bus は、Azure リージョンにまたがらない一意の名前空間名を使用します。 したがって、最初の要件は代替リージョンで必要なサービス バス名前空間を設定することです。 ただし、キューに置かれたメッセージの持続性についても考慮事項があります。 Azure リージョン間でメッセージをレプリケートするにはいくつかの方法があります。 これらのレプリケーション方法とその他のディザスター リカバリー計画の詳細については、「[Service Bus の障害および災害に対するアプリケーションの保護のベスト プラクティス](/azure/service-bus-messaging/service-bus-outages-disasters/)」をご覧ください。
 
 ### <a name="app-service"></a>App Service
 
@@ -129,7 +127,7 @@ Azure App Service アプリケーション (Web Apps や Mobile Apps など) を
 
 ### <a name="hdinsight"></a>HDInsight
 
-HDInsight に関連付けられているデータは、既定では Azure BLOB ストレージに保存されます。 HDInsight では、MapReduce ジョブを処理する Hadoop クラスターは、分析されるデータを保持したストレージ アカウントと同じリージョンに併置する必要があります。 Azure Storage で利用可能な geo レプリケーション機能を使用すると、何らかの理由によりプライマリ リージョンが使用できなくなった場合、データがレプリケートされたセカンダリ リージョンのデータにアクセスできます。 データがレプリケートされているリージョンに新しい Hadoop クラスターを作成し、データの処理を継続することができます。 その他の可用性の考慮事項については、 [HDInsight (可用性)](recovery-local-failures.md#other-azure-platform-services)に関するページを参照してください。
+HDInsight に関連付けられているデータは、既定では Azure BLOB ストレージに保存されます。 HDInsight では、MapReduce ジョブを処理する Hadoop クラスターは、分析されるデータを保持したストレージ アカウントと同じリージョンに併置する必要があります。 Azure Storage で利用可能な geo レプリケーション機能を使用すると、何らかの理由によりプライマリ リージョンが使用できなくなった場合、データがレプリケートされたセカンダリ リージョンのデータにアクセスできます。 データがレプリケートされているリージョンに新しい Hadoop クラスターを作成し、データの処理を継続することができます。
 
 ### <a name="sql-reporting"></a>SQL Reporting
 

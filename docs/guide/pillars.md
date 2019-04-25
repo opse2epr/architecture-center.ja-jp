@@ -8,12 +8,12 @@ ms.topic: guide
 ms.service: architecture-center
 ms.subservice: reference-architecture
 ms.custom: seojan19
-ms.openlocfilehash: 76870f58fc957f6d82f6dc176d1c538c795a7d20
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: d6eed98c6e224956942c45b52621ec02832be015
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58243063"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59639770"
 ---
 # <a name="pillars-of-software-quality"></a>ソフトウェア品質の重要な要素
 
@@ -76,8 +76,6 @@ Azure では、サービス レベル アグリーメント (SLA) で、アッ�
 
 アプリケーションは、多くの場合、複数のサービスに依存しています。 一般に、いずれか 1 つのサービスにダウンタイムが発生する確率は、他のサービスには無関係です。 たとえば、ご自分のアプリケーションが 2 つのサービスに依存しており、それぞれの SLA が 99.9% だとします。 両方のサービスの複合的な SLA は、99.9% &times; 99.9% &asymp; 99.8% で、各サービス単体よりもやや少なくなります。
 
-[可用性のチェックリスト][availability-checklist]を使用して、可用性の観点からご自分の設計を確認してください。
-
 ### <a name="availability-guidance"></a>可用性のガイダンス
 
 - [可用性のための設計パターン][availability-patterns]
@@ -104,11 +102,9 @@ Azure では、サービス レベル アグリーメント (SLA) で、アッ�
 
 回復性のあるアプリケーションを設計するときには、ご自分の可用性要件を理解する必要があります。 どの程度のダウンタイムを許容できるのでしょうか。 これは、ある程度はコストによって決まります。 起こり得るダウンタイムによって貴社のビジネスが被るコストはいくらになるでしょうか。 アプリケーションの可用性を高めることにいくら投資すべきでしょうか。
 
-[回復性のチェックリスト][resiliency-checklist]を使用して、回復性の観点からご自分の設計を確認してください。
-
 ### <a name="resiliency-guidance"></a>回復性のガイダンス
 
-- [回復性に優れた Azure 用アプリケーションの設計][resiliency]
+- [信頼性の高い Azure アプリケーションの設計][resiliency]
 - [回復性のための設計パターン][resiliency-patterns]
 - ベスト プラクティス:[一時的な障害の処理][transient-fault-handling]、[特定のサービスの再試行ガイダンス][retry-service-specific]
 
@@ -173,7 +169,7 @@ Azure の高可用性を使用するときは、ご自分のデータが適切�
 
 [dr-guidance]: ../resiliency/disaster-recovery-azure-applications.md
 [identity-ref-arch]: ../reference-architectures/identity/index.md
-[resiliency]: ../resiliency/index.md
+[resiliency]: ../reliability/index.md
 
 [ad-subscriptions]: /azure/active-directory/active-directory-how-subscriptions-associated-directory
 [data-warehouse-encryption]: /azure/data-lake-store/data-lake-store-security-overview#data-protection
@@ -205,7 +201,5 @@ Azure の高可用性を使用するときは、ご自分のデータが適切�
 [transient-fault-handling]: ../best-practices/transient-faults.md
 
 <!-- checklist -->
-[availability-checklist]: ../checklist/availability.md
 [devops-checklist]: ../checklist/dev-ops.md
-[resiliency-checklist]: ../checklist/resiliency.md
 [scalability-checklist]: ../checklist/scalability.md

@@ -8,12 +8,12 @@ ms.topic: example-scenario
 ms.service: architecture-center
 ms.subservice: example-scenario
 social_image_url: /azure/architecture/example-scenario/ai/media/architecture-commerce-chatbot.png
-ms.openlocfilehash: 48f85e7443bcd6149c8024d20fb50816c1a4df38
-ms.sourcegitcommit: c053e6edb429299a0ad9b327888d596c48859d4a
+ms.openlocfilehash: c4859cb0e43603991e4f8e6a0311a28537f29f1a
+ms.sourcegitcommit: 579c39ff4b776704ead17a006bf24cd4cdc65edd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58245853"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59640262"
 ---
 # <a name="conversational-chatbot-for-hotel-reservations-on-azure"></a>Azure でのホテル予約用の会話型チャットボット
 
@@ -65,8 +65,6 @@ Bot Service と Language Understanding Service や Speech API サービスなど
 
 このシナリオでは、Azure SQL Database を使用して顧客の予約を格納します。 SQL Database には、ゾーン冗長データベース、フェールオーバー グループ、geo レプリケーションなどの機能が用意されています。 詳細については、[Azure SQL Database の可用性機能][sqlavailability-docs]に関するセクションをご覧ください。
 
-可用性に関する他のトピックについては、Azure アーキテクチャ センターの[可用性のチェックリスト][availability]を参照してください。
-
 ### <a name="scalability"></a>スケーラビリティ
 
 このシナリオでは、Azure App Service を使用します。 App Service により、ボットを実行するインスタンスの数を自動的にスケーリングできます。 この機能を使用することで、Web アプリケーションやチャットボットに対する顧客の要求に対応できます。 自動スケールの詳細については、Azureアーキテクチャ センターの[自動スケールのベスト プラクティス][autoscaling]に関する記事をご覧ください。
@@ -87,13 +85,13 @@ Azure SQL Database に格納される情報は、Transparent Data Encryption (TD
 
 アプリケーションの正常性を監視するために、このシナリオでは Application Insights を使用します。 Application Insights により、チャットボットのカスタマー エクスペリエンスや可用性に影響を及ぼすパフォーマンスの問題についてアラートを生成し、対応できます。 詳細については、「[Application Insights とは何か?][appinsights-docs]」をご覧ください。
 
-回復性に優れたソリューションの設計に関する一般的なガイダンスについては、「[回復性に優れた Azure 用アプリケーションの設計][resiliency]」を参照してください。
+その他の回復性に関するトピックについては、「[Designing reliable Azure applications](../../reliability/index.md)」 (信頼性の高い Azure アプリケーションの設計) を参照してください。
 
 ## <a name="deploy-the-scenario"></a>シナリオのデプロイ
 
 このシナリオは、最も重視される分野を検討するために、次の 3 つのコンポーネントに分かれています。
 
-- [インフラストラクチャ コンポーネント](#deploy-infrastructure-components)。 Azure Resource Manger テンプレートを使用して、コア インフラストラクチャ コンポーネント (App Service、Web App、Application Insights、ストレージ アカウント、SQL Server およびデータベース) をデプロイします。
+- [インフラストラクチャ コンポーネント](#walk-through)。 Azure Resource Manger テンプレートを使用して、コア インフラストラクチャ コンポーネント (App Service、Web App、Application Insights、ストレージ アカウント、SQL Server およびデータベース) をデプロイします。
 - [Web App チャットボット](#deploy-web-app-chatbot)。 Azure CLI を使用して、Bot Service および Language Understanding and Intelligent Services (LUIS) アプリと共にボットをデプロイします。
 - [サンプル C# チャットボット アプリケーション](#deploy-chatbot-c-application-code)。 Visual Studio を使用して、ホテル予約 C# アプリケーションのサンプル コードを確認し、ボットを Azure にデプロイします。
 
@@ -170,7 +168,6 @@ Azure Bot Service に関する一連のガイド付きチュートリアルに�
 [appservice-docs]: /azure/app-service/
 [architecture]: ./media/architecture-commerce-chatbot.png
 [autoscaling]: ../../best-practices/auto-scaling.md
-[availability]: ../../checklist/availability.md
 [botservice-docs]: /azure/bot-service/
 [cognitive-docs]: /azure/cognitive-services/
 [resiliency]: ../../resiliency/index.md

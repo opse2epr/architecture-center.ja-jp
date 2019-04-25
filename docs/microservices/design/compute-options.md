@@ -17,10 +17,7 @@ Azure プラットフォームでは、以下のオプションを検討して�
 
 - [Service Fabric](/azure/service-fabric/) は、マイクロサービスのパッケージ化、デプロイ、管理を行うための分散システム プラットフォームです。 マイクロサービスは、コンテナー、バイナリ実行可能ファイル、または [Reliable Services](/azure/service-fabric/service-fabric-reliable-services-introduction) として Service Fabric にデプロイできます。 Reliable Services プログラミング モデルを使うと、サービスは Service Fabric プログラミング API を直接使って、システムのクエリ、正常性のレポート、構成とコードの変更に関する通知の受信、他のサービスの検出を行うことができます。 Service Fabric に関する重要な違いは、Service Fabric では [Reliable Collection](/azure/service-fabric/service-fabric-reliable-services-reliable-collections) を使うステートフル サービスの構築が重視されていることです。
 
-- [Azure Container Service](/azure/container-service/) (ACS) は、運用環境に対応した DC/OS、Docker Swarm、または Kubernetes クラスターをデプロイできる Azure サービスです。
-
-  > [!NOTE]
-  > ACS では Kubernetes をサポートしていますが、AKS を使用して Azure 上で Kubernetes を実行することをお勧めします。 AKS を使用すると、強化された管理機能とコスト面の利点を得ることができます。
+- Docker Enterprise Edition や Mesosphere DC/OS など、その他のオプションは、Azure の IaaS 環境で実行できます。 [Azure Marketplace](https://azuremarketplace.microsoft.com) でデプロイ テンプレートを見つけることができます。
 
 ## <a name="containers"></a>Containers
 
